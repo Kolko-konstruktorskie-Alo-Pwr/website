@@ -1,7 +1,8 @@
 *{
-    --bg-color:  #131010;
-    --text-color: #FFF0DC;
-    --highlight-color:  #F0BB78;
+    --bg-color:  #F5ECD5;
+    --text-color: #3D3D3D;
+    --highlight-color:  #578E7E;
+    --border-radius: 5px;
     padding: 0;
     margin:0;
 }
@@ -125,11 +126,15 @@ section{
     flex-direction: column;
     transition: .2s;
     color: var(--text-color);
+    border-radius: var(--border-radius);
+    overflow: hidden;
     text-decoration: none;
 
 }
 
 .post img{
+    border-bottom-right-radius: var(--border-radius);
+    border-bottom-left-radius: var(--border-radius);
     height:50%;
     object-fit: cover;
 }
