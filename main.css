@@ -157,6 +157,12 @@ section{
     gap:2rem;
     flex-direction: column;
     font-size: 120%;
+    text-align: justify;
+    
+}
+
+.article p{
+    line-height: 1.5;
 }
 
 footer{
