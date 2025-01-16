@@ -94,7 +94,7 @@ section{
 
 
 .about-us-text{
-    padding: 2rem;
+    padding: 1rem;
     font-size: 120%;
     text-align: justify;
 }
@@ -108,9 +108,9 @@ section{
 .blog{
     width: fit-content;
     display: flex;
-    padding: 2rem;
+    padding: 1rem;
     gap: 2rem;
-    justify-content: center;
+    justify-content: left;
     flex-wrap: wrap;
 
     
