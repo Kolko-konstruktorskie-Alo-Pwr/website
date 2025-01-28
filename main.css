@@ -5,6 +5,137 @@
     --border-radius: 5px;
     padding: 0;
     margin:0;
+    scroll-behavior: smooth;
+}
+
+
+
+@media(min-width:600px){
+
+    .wide-menu{
+        position: fixed;
+        border-bottom: 1px solid var(--highlight-color);
+        z-index: 99;
+        width:calc(100% - 2rem);
+
+        padding: 1rem;
+        display: flex;
+        background-color: var(--bg-color);
+        justify-content: space-between;
+
+    }
+
+    .links, .social{
+        display: flex;
+        
+        gap:1rem;
+    }
+
+
+
+    .hidden-menu{
+        display: none;
+    }
+    .menu-icon{
+        display: none;
+    }
+
+
+
+}
+
+@media(max-width:600px){
+
+    .wide-menu{
+        display: none;
+    }
+
+    .menu-icon{
+        display: inline;
+        padding: .1rem;
+        color:var(--highlight-color);
+        position: fixed;
+        top:0;
+        z-index: 99;
+        right:20px
+    }
+
+    .hidden-menu{
+        display: flex;
+        
+    }
+
+
+}
+
+
+@keyframes hide {
+    0%{
+        display: flex;
+        flex-direction: column;
+    }
+    99%{
+        transform: translateY(-105%);
+        z-index: 90;
+
+        
+    }
+    100%{
+        display: none;
+    }
+    
+}
+
+@keyframes show {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0);
+        
+        
+    }
+    
+}
+.hidden-menu{
+    animation: hide;
+    animation-duration: 1s;
+    animation-fill-mode: forwards; 
+    animation-delay: 0s; 
+    position: fixed;
+    background-color: var(--bg-color);
+    display: none;
+    padding: 1rem;
+    gap:1rem;
+    flex-direction: column;
+
+}
+
+.visible-menu{
+    position: fixed;
+    display: flex;
+    opacity: 1;
+    animation: show;
+    animation-duration: .2s;
+    padding: 1rem;
+    gap:1rem;
+    flex-direction: column;
+    background-color:var(--bg-color);
+    border: 1px solid var(--highlight-color);
+    width:100%;
+    z-index: 90;
+}
+
+nav a{
+    text-decoration: none;
+    color:var(--text-color)
+
+}
+
+nav a:hover{
+    text-decoration: none;
+    color:var(--highlight-color)
+    
 }
 
 body{
@@ -15,6 +146,7 @@ body{
     font-style: normal;
     overflow-x: hidden;
     max-width: 100vw;
+
 }
 
 body::-webkit-scrollbar {
@@ -23,12 +155,14 @@ body::-webkit-scrollbar {
   
 
 section{
+
     padding: 2rem;
     width: calc(100vw - 4rem);
-    min-height: 100vh;
+
 }
 
 .landing-page{
+    height: 100vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -100,6 +234,7 @@ section{
 }
 
 .blog-section{
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -182,13 +317,10 @@ footer{
     display: flex;
     flex-direction: column;
     gap:.5rem;
+    padding: 2rem;
     
 }
 
 .contacts a{
     color:var(--text-color)
-}
-
-.padding{
-    height:4rem;
 }
