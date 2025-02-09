@@ -404,10 +404,12 @@ footer{
 }
 
 .gallery{
-    padding: 0;
-    width: 100%;
+    padding: 2rem;
+    width: calc(100vw - 4rem);
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 1;
+    position: relative;
 }
