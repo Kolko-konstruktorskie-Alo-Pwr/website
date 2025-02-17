@@ -264,10 +264,21 @@ section{
 }
 
 
+
 .about-us-text{
     padding: 1rem;
     font-size: 120%;
     text-align: justify;
+    width:80%;
+    min-width: 250px;
+    
+}
+
+.text-wrap{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .blog-section{
@@ -361,7 +372,8 @@ section{
     gap:2rem;
     flex-direction: column;
     font-size: 120%;
-    min-height: 100vh;;
+    width: 100%;
+    min-height: 100vh;
     padding: 4rem;
     box-sizing: border-box;
     text-align: justify;
@@ -369,6 +381,8 @@ section{
 }
 
 .article p{
+    width: 80%;
+    min-width: 250px;
     line-height: 1.5;
 }
 
